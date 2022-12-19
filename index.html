@@ -1,0 +1,377 @@
+<html>
+<head>
+ <script src="https://kit.fontawesome.com/d8e1cf8a52.js" crossorigin="anonymous"></script>
+ <style>
+ 
+
+ 
+ 
+#button
+{
+margin-top:100px;
+margin-left:600px;
+height:70px;width:170px;
+background-color:yellow;
+font-size:25px;
+font-weight:bold;
+color:green;
+border-radius:10px;
+margin-bottom:100px;
+}
+
+#Home
+{
+margin-right:150px;
+
+}
+
+#headerdiv
+{
+ width:1800px;
+ height:65px;
+ background:purple;
+ 
+ }
+ 
+#movieimg
+{
+ width:1850px;
+ height:350px;
+ background-color:green;
+ margin-right:10px;
+ }
+
+
+#goa
+{
+
+position:absolute;
+top:80px;
+left:190;
+font-size:22px;
+}
+
+#table
+ { 
+    color:red;
+    border:1px solid red;   
+    font-size: 22px;
+	margin-top:-150px;
+	left:30px;	
+	position:relative;
+	width:400px;
+	border-collapse:collapse;	
+	background-color:pink;
+	text-align:center;
+	
+}
+td
+{
+
+border:1px solid red;
+border-spacing:0px;
+
+}
+
+
+
+
+ #ull{
+  list-style-type:none;
+  text-decoration:none; /*underline will not come*/
+  background color:green;
+  
+}
+
+#myli1{
+  display:block; // block is a box area,a is a anchor tag this has been used for all href file//  
+  font-size:17px;
+  text-decoration:none; /*underline will not come*/
+  float: left;
+  font-family:Arial Black; <!--arial is text design-->
+  font-size:19px;
+  margin-left:10px;
+  margin-right:320px;
+  margin-top:70px;
+  }
+
+
+
+#myul {
+  list-style-type:none;  
+  overflow:hidden;
+  
+}
+
+#myli{
+  display:block; // block is a box area,a is a anchor tag this has been used for all href file//  
+  font-size:17px;
+  text-decoration:none; 
+   float:left;
+   margin-right:240px;
+  font-family:Arial Black; <!--arial is text design-->
+  font-size:16px;
+  
+  }
+  a
+ {
+ text-decoration:none;  /*underline will not come*/
+ }
+  
+
+
+
+
+  #span
+  {
+ background:red; 
+ position:absolute;
+ border:2px solid white;
+ font-size:18px;
+ padding:3px;
+ margin-left:17px;
+ }
+ 
+ 
+ 
+ 
+ 
+ //slider.html style
+ 
+ 
+ * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1500px;
+  
+
+  position: relative;
+  margin: auto;
+}
+
+
+
+
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+#search{
+padding-left:1000px;
+padding-top:-140px;
+
+}
+
+#bell
+{
+
+margin-top:-40px;
+font-size:25px;
+
+}
+
+#qr{
+margin-top:-40px;
+
+}
+	 
+	 
+	 
+</style>	
+</head>
+
+
+<body>
+
+
+
+
+<div id="headerdiv">
+
+
+<div style="top:2px;padding-left:20px;font-size:28px;color:yellow; float:left; " >IT ALL STARTS HERE <br>
+<span style="padding-left:20px;font-size:22px;color:green;float:left;">Saharanpur ></span>
+
+
+<a id="search" href="ac.html"><i class="fa solid fa-magnifying-glass fa-3x,"  ></i></a>
+<a id="bell" href="fac.html"><img src="bell.png" height="25"></a>
+
+<a id="qr" href="ac.html"><img src="qr.png" height="25"></a>
+
+</div>
+</div>
+
+
+<ul id="myul">
+<li id="myli" class="mylist"><a href="movie.html">Movies</a>  </li>
+<li id="myli" class="mylist"><a href="Stream.html">Stream</a>  </li>
+<li id="myli" class="mylist"><a href="Comedy.html">Comedy Shows</a>  </li>
+<li id="myli" class="mylist"><a href="sports.html">Sports</a> 
+ </li>
+</ul>
+
+
+
+
+
+
+
+<!--slider.html coding-->
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ 
+  <img src="C:\banner6.jpg" style="width:100% ;height:50%">
+
+</div>
+
+<div class="mySlides fade">
+
+  <img src="C:\Users\Admin\Desktop\sliders movie\banner7.jpg" style="width:100%;height:50%">
+
+</div>
+
+<div class="mySlides fade">
+
+  <img src="C:\Users\Admin\Desktop\sliders movie\banner8.jpg" style="width:100%;height:50%">
+ 
+</div>
+
+
+<br>
+
+
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+//for loop is hiding all the slides(images)
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  
+  slideIndex++;
+  //means slideindex=1
+  
+  if (slideIndex > slides.length) {slideIndex = 1}   
+//   	1> 3 
+ 
+  
+  slides[slideIndex-1].style.display = "block";  
+
+  setTimeout(showSlides, 2000); 
+}
+</script>
+
+
+
+
+
+
+
+
+<p style="top:-7px;margin-left:30px; font-size:27px; position:absolute; width:600px;">The Future Is 
+Now</p>
+
+<p style="position:absolute;
+top:30px;
+left:100px; 
+color:white;
+font-size:35px;
+">Sunburn <br> 
+</p>
+
+<div id="goa">
+<p>Goa</p>
+</div>
+
+
+<div>
+
+<table id="table">
+<tr>
+<td>28</td>
+<td>29</td>
+<td>30 Dec 2022</td>
+<td>Vagator Goa</td>
+
+</tr>
+
+</table>
+</div>
+
+<p style="font-size:23px; margin-top:30px;position:relative;
+left:30px; width:700px; color:white;">EARLY BIRD TICKETS
+
+ <span id="span">
+Live Now</span>
+
+</div>
+<br><br><br>
+
+<p style="font-size:23px;color:blue;">Coin<span style="font-size:23px;color:orange;">DCX 
+<span style="font-size:16;"><sup>Present</sup></span> </p>
+
+
+<p style="font-size:23px; position:relative; top:-20px;">Recommended Movies</p>
+
+<div>
+<a id="movieimg" href="image16dup.html"><img src= "C:\Users\Admin\Desktop\Movie images/image1.jpg" width="250px"height="350px"> </a>
+<a id="movieimg" href="image2.html"><img src= "C:\Users\Admin\Desktop\Movie images/image2.jpg" width="250px"height="350px"> </a> 
+<a id="movieimg" href="image3.html"><img src="C:\Users\Admin\Desktop\Movie images/image3.jpg"  width="250px"height="350px"> </a> 
+<a id="movieimg" href="image6.html"><img src="C:\Users\Admin\Desktop\Movie images/image6.jpg"  width="250px"height="350px"> </a> 
+<a id="movieimg" href="image5.html"><img src="C:\Users\Admin\Desktop\Movie images/image5.jpg"  width="250px"height="350px"> </a> 
+
+</div>
+
+
+<div>
+<ul id="ull">
+<li id="myli1" class="my list1"><a href="Home.html">Home</a></li>
+<li id="myli1" class="my list1"><a href="buzz.html">Buzz</a>  </li>
+<li id="myli1" class="mylist1" style="margin-left:80px;;margin-top:50px;"><a id="footer" href="profile.html"><img src="profile icon.png" style="left:50px;" height="25px"><br>profile
+</a></li>
+</ul>
+
+
+
+
+</ul>
+
+
+</body>
+</div>
+</html>
+
+
+
